@@ -1,6 +1,6 @@
 ## Olá, eu sou André
 
-```linux
+```c
 andre@andre:~$ ls
 Desktop  Downloads  Music  Pictures  Videos  Documents  Public  Templates 
 andre@andre:~$ cd /bin/
