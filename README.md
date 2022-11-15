@@ -1,34 +1,36 @@
+
 ```
-print('Hello World\n
-        :D')
-```
-```
-const xndrxdxxrtx = {
+andre@andre:~$ ls
+Desktop  Downloads  Music  Pictures  Videos  Documents  Public  Templates 
+andre@andre:~$ cd /bin/
+andre@andre:~$ whoami.c
+andre@andre:~$ gcc -o andreduarte whoami.c
+andre@andre:~$ ls
+andre@andre:~$ andreduarte  whoami.c
+andre@andre:~$ ./andreduarte
+
+const andrxduarte = {
   info: {
     name: 'André',
     aka: [
-      '舰队的偶像-岛风酱!' // Common Nickname
+      'andrxduarte' //  Nickname
     ],
     job: 'Data Analyst'
   },
   progammingSkills:{
     console: [
       '.Net',
-      'Node.js'
-    ],
-    desktop: [
-      '.Net (WPF / UWP)',
-      'electron.js'
+      'node.js'
     ],
     browser: [
-      'Fast',
-      'Vue 3',
       'React'
     ],
-    web: [
-      'ASP.Net',
-      'Node.js',
-      'Java Web'
+    technologies: [
+      'Eclipse',
+      'Visual Studio/Code',
+      'Jupyter Notebook',
+      'PyCharm',
+      'Spyder'
     ],
     mobile: [
       '.Net Xamarin'
@@ -39,7 +41,6 @@ const xndrxdxxrtx = {
     'C/C++',
     'Python',
     'R',
-    'Assembly'
   ]
 }
 ```
