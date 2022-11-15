@@ -1,6 +1,6 @@
 ## Olá, eu sou André
 
-```c
+```typescript
 andre@andre:~$ ls
 Desktop  Downloads  Music  Pictures  Videos  Documents  Public  Templates 
 andre@andre:~$ cd /bin/
@@ -9,8 +9,7 @@ andre@andre:~$ gcc -o andreduarte whoami.c
 andre@andre:~$ ls
 andre@andre:~$ andreduarte  whoami.c
 andre@andre:~$ ./andreduarte
-```
-```typescript
+
 const andrxduarte = {
   info: {
     name: 'André',
