@@ -4,6 +4,7 @@
 andre@andre:~$ ls
 Desktop  Downloads  Music  Pictures  Videos  Documents  Public  Templates 
 andre@andre:~$ cd /bin/
+andre@andre:~$ ls
 andre@andre:~$ whoami.c
 andre@andre:~$ gcc -o andreduarte whoami.c
 andre@andre:~$ ls
