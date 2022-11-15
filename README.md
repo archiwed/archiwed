@@ -1,6 +1,6 @@
 ## Olá, eu sou André
 
-```typescript
+```cs
 andre@andre:~$ ls
 Desktop  Downloads  Music  Pictures  Videos  Documents  Public  Templates 
 andre@andre:~$ cd /bin/
