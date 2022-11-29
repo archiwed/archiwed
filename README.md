@@ -37,7 +37,8 @@ const andrxduarte = {
     'Python',
     'R',
     'JavaScript',
-    'TypeScript'
+    'TypeScript',
+    'Bash'
   ]
 }
 ```
