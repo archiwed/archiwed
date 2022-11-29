@@ -23,7 +23,9 @@ const andrxduarte = {
       'Visual Studio/Code',
       'Jupyter Notebook',
       'PyCharm',
-      'Spyder'
+      'Spyder',
+      'R Studio',
+      'Arduino IDE'
     ],
     mobile: [
       '.Net Xamarin'
