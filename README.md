@@ -36,8 +36,6 @@ const andrxduarte = {
     'C/C++',
     'Python',
     'R',
-    'JavaScript',
-    'TypeScript',
     'Bash'
   ]
 }
