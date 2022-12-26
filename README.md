@@ -28,7 +28,7 @@ setup(
     projects_urls={
         'Github': 'https://github.com/andrxduarte',
     },
-    description='Olá, sou André Duarte, estudante de Ciência da Computação na UFF.',
+    description='Olá, sou André Duarte, estudante de Ciência da Computação na UFF. Eu amo Python :D',
     long_description=LONG_DESCRIPTION,
     long_description_content_type='text/markdown',
     author=AUTHOR,
