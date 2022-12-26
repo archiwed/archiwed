@@ -4,6 +4,7 @@
 
 #!/usr/bin/env python
 import profile
+import description
 
 AUTHOR = config['andrxduarte']['author']
 AUTHOR_EMAIL = config['andrxduarte']['email']
