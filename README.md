@@ -7,7 +7,7 @@ import profile
 import description
 
 AUTHOR = config['andrxduarte']['author']
-AUTHOR_EMAIL = config['andrxduarte']['email']
+AUTHOR_EMAIL = config['andrereisduarte@hotmail.com']['email']
 
 with open('README.md') as text:
     LONG_DESCRIPTION = text.read()
@@ -28,7 +28,7 @@ setup(
     projects_urls={
         'Github': 'https://github.com/andrxduarte',
     },
-    description='Olá, sou André Duarte, estudante de Ciência da Computação na UFF. Eu amo Python :D',
+    description='Olá, sou André Duarte, estudante de Ciência da Computação na UFF.',
     long_description=LONG_DESCRIPTION,
     long_description_content_type='text/markdown',
     author=AUTHOR,
