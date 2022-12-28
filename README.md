@@ -12,17 +12,6 @@ AUTHOR_EMAIL = config['andrereisduarte@hotmail.com']['email']
 with open('README.md') as text:
     LONG_DESCRIPTION = text.read()
 
-REQUIREMENTS = []
-DEPENDENCIES = []
-
-with open('requirements.txt') as requirements:
-    for requirement in requirements.readlines():
-        if requirement.startswith('git+git://'):
-            DEPENDENCIES.append(requirement)
-        else:
-            REQUIREMENTS.append(requirement)
-
-
 setup(
     name='André Duarte',
     projects_urls={
