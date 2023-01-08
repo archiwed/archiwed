@@ -6,22 +6,13 @@
 import profile
 import description
 
-AUTHOR = config['andrxduarte']['author']
-AUTHOR_EMAIL = config['andrereisduarte@hotmail.com']['email']
-
 with open('README.md') as text:
     LONG_DESCRIPTION = text.read()
 
 setup(
     name='André Duarte',
-    projects_urls={
-        'Github': 'https://github.com/andrxduarte',
-    },
     description='Olá, sou André Duarte, estudante de Ciência da Computação na UFF.',
-    long_description=LONG_DESCRIPTION,
-    long_description_content_type='text/markdown',
-    author=AUTHOR,
-    author_email=AUTHOR_EMAIL,
+    author_email=andrereisduarte@hotmail.com,
     progammingLanguages=[
         'Python',
         'R',
@@ -29,10 +20,6 @@ setup(
         'C++',
         'Bash'
     ],
-    progammingLanguages_dir={'André'},
-    include_progammingLanguages_data=True,
-    python_requires='>=3, <=3.11',
-    platforms=['any'],
     technologies=[
         'Eclipse for C++/Python',
         'Spyder',
