@@ -11,7 +11,7 @@ with open('README.md') as text:
 
 setup(
     name='André Duarte',
-    description='Olá, sou André Duarte, estudante de Ciência da Computação na UFF.',
+    description='Olá, sou André Duarte, estudante de Ciência da Computação na Universidade Federal Fluminense.',
     author_email=andrereisduarte@hotmail.com,
     progammingLanguages=[
         'Python',
