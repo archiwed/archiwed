@@ -33,3 +33,8 @@ I love Keras (Dense)         (None, 10)                650
 Total params: 9,418
 Trainable params: 9,418
 Non-trainable params: 0
+```
+
+```python
+model.fit(train_ds, epochs=20, validation_data=val_ds)
+```
