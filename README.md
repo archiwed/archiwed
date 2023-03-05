@@ -11,7 +11,7 @@ from tensorflow.keras.layers import Dense
 model = Sequential()
 model.add(Dense(128, input_shape=(3,), name='nome'))
 model.add(Dense(64, name='hobby'))
-model.add(Dense(10, name='exit?'))
+model.add(Dense(10, name='hobby_2'))
 
 print('Modelo:')
 model.summary()
