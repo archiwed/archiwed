@@ -2,6 +2,11 @@ Olá, meu nome é André Duarte e sou estudante de Ciência da Computação na U
 
 Hello, my name is André Duarte and I am a Computer Science student at the Federal Fluminense University (UFF). I have intermediate skills in Python and am currently studying Machine Learning and Deep Learning with Python and R. Additionally, I have basic skills in C, C++ and Bash, and am an advanced Linux user. I also have experience with technologies such as Jupyter Notebook, Spider, Docker and Kubernets. I am always seeking new challenges and opportunities to grow and develop my skills as a programmer.
 
+```bash
+kubectl exec -it profileandre -- /bin/bash
+```
+
+
 ```python
 
 #!/usr/bin/env python
