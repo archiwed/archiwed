@@ -8,16 +8,14 @@ Hello, my name is André Duarte and I am a Computer Science student at the Feder
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 
-# cria o modelo
 model = Sequential()
 model.add(Dense(128, input_shape=(3,), name='nome'))
 model.add(Dense(64, name='idade'))
 model.add(Dense(10, name='altura'))
 
-# exibe informações sobre o modelo
 print('Modelo:')
 modelo.summary()
-
+```
 
 ```markdown
 
