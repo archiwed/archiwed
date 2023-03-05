@@ -36,5 +36,5 @@ Non-trainable params: 0
 ```
 
 ```python
-model.fit(train_ds, epochs=20, validation_data=val_ds)
+model.fit(train_profileandre , epochs=50, validation_data=val_ds)
 ```
