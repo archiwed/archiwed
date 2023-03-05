@@ -10,11 +10,11 @@ from tensorflow.keras.layers import Dense
 
 model = Sequential()
 model.add(Dense(128, input_shape=(3,), name='nome'))
-model.add(Dense(64, name='idade'))
-model.add(Dense(10, name='altura'))
+model.add(Dense(64, name='hobby'))
+model.add(Dense(10, name='exit?'))
 
 print('Modelo:')
-modelo.summary()
+model.summary()
 ```
 
 ```markdown
