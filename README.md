@@ -23,13 +23,38 @@ model = Model()
 
 print('Modelo:')
 print(model)
+```
+```markdown
+Modelo:
+Model(
+  (fc1): Linear(in_features=3, out_features=128, bias=True)
+  (fc2): Linear(in_features=128, out_features=64, bias=True)
+  (fc3): Linear(in_features=64, out_features=10, bias=True)
+)
 
+Resumo do modelo:
+------------------------------------------------------------------------------------------
+Layer (type:depth-idx)                   Output Shape              Param #
+==========================================================================================
+Model                                    --                        --
+├─ I love Python: 1-1                       [1, 128]                  512
+├─ I love Pytorch: 1-2                      [1, 64]                   8,256
+├─ I love me: 1-3                           [1, 10]                   650
+==========================================================================================
+Total params: 9,418
+Trainable params: 9,418
+Non-trainable params: 0
+------------------------------------------------------------------------------------------
+
+```
+
+```python
 print('Resumo do modelo:')
 summary = nn.Summary(model, input_size=(1, 3))
 print(summary)
 
-train_data = I love Python
-val_data =  I love Pytorch
+train_data =
+val_data = 
 
 optimizer = torch.optim.SGD(model.parameters(), lr=0.01)
 loss_fn = nn.MSELoss()
