@@ -2,44 +2,50 @@ Olá, meu nome é André Duarte e sou estudante de Ciência da Computação na U
 
 Hello, my name is André Duarte and I'm a Computer Science student at Universidade Federal Fluminense (UFF). I have intermediate skills in Python and R. Currently, I'm studying Machine Learning and Deep Learning with Python and R, more specifically with PyTorch and Keras. Additionally, I have basic skills in C, C++, and Bash, and I'm an advanced Linux user (Arch Linux btw). I also have experience with technologies such as Git, Hugging Face, Docker, and Kubernetes. I'm always looking for new challenges and opportunities to grow and develop my skills as a programmer.
 
-```bash
-kubectl exec -it profileandre -- /bin/bash
-```
-
-
 ```python
+import torch
+import torch.nn as nn
 
-#!/usr/bin/env python
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense
+class Model(nn.Module):
+    def __init__(self):
+        super(Model, self).__init__()
+        self.fc1 = nn.Linear(3, 128)
+        self.fc2 = nn.Linear(128, 64)
+        self.fc3 = nn.Linear(64, 10)
 
-model = Sequential()
-model.add(Dense(128, input_shape=(3,), name='nome'))
-model.add(Dense(64, name='hobby'))
-model.add(Dense(10, name='hobby_2'))
+    def forward(self, x):
+        x = torch.relu(self.fc1(x))
+        x = torch.relu(self.fc2(x))
+        x = self.fc3(x)
+        return x
+
+model = Model()
 
 print('Modelo:')
-model.summary()
-```
+print(model)
 
-```markdown
+print('Resumo do modelo:')
+summary = nn.Summary(model, input_size=(1, 3))
+print(summary)
 
-Modelo:
-Model: "sequential"
-_________________________________________________________________
-Layer (type)                 Output Shape              Param #   
-=================================================================
-André Duarte (Dense)         (None, 128)               512       
-_________________________________________________________________
-I love Python (Dense)        (None, 64)                8256      
-_________________________________________________________________
-I love Keras (Dense)         (None, 10)                650       
-=================================================================
-Total params: 9,418
-Trainable params: 9,418
-Non-trainable params: 0
-```
+train_data = I love Python
+val_data =  I love Pytorch
 
-```python
-model.fit(train_profileandre , epochs=50, validation_data=val_ds)
+optimizer = torch.optim.SGD(model.parameters(), lr=0.01)
+loss_fn = nn.MSELoss()
+
+for epoch in range(50):
+    for inputs, targets in train_data:
+        optimizer.zero_grad()
+        outputs = model(inputs)
+        loss = loss_fn(outputs, targets)
+        loss.backward()
+        optimizer.step()
+
+    with torch.no_grad():
+        for inputs, targets in val_data:
+            outputs = model(inputs)
+            val_loss = loss_fn(outputs, targets)
+
+    print(f'Epoch {epoch+1}, Train Loss: {loss.item()}, Val Loss: {val_loss.item()}')
 ```
