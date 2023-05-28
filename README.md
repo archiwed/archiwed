@@ -1,55 +1,50 @@
+```asm
+section .data
+    name db 'André Duarte', 0
+    languages db 'C/C++/Assembly/Python/Bash/Zsh', 0
+    description db 'I love writing in low-level languages but I adore pytorch and Transformers', 0
 
-```python
-import torch
-import torch.nn as nn
+section .bss
+    reservedSpace resb 100
 
-class Model(nn.Module):
-    def __init__(self):
-        super(Model, self).__init__()
-        self.fc1 = nn.Linear(3, 128)
-        self.fc2 = nn.Linear(128, 64)
-        self.fc3 = nn.Linear(64, 10)
+section .text
+    global _start
 
-    def forward(self, x):
-        x = torch.relu(self.fc1(x))
-        x = torch.relu(self.fc2(x))
-        x = self.fc3(x)
-        return x
+_start:
+    ; allocate memory space
+    mov eax, 45
+    mov ebx, 100
+    int 0x80
+    mov [reservedSpace], eax
 
-model = Model()
+    ; copy name to memory space
+    mov eax, 4
+    mov ebx, [reservedSpace]
+    mov ecx, name
+    mov edx, 12
+    int 0x80
 
-print('Modelo:\n I love all of this :)')
-print(model)
-```
-```markdown
-Modelo:
-I love all of this :)
-Model(
-  (fc1): Linear(in_features=3, out_features=128, bias=True)
-  (fc2): Linear(in_features=128, out_features=64, bias=True)
-  (fc3): Linear(in_features=64, out_features=10, bias=True)
-)
-```
+    ; copy languages to memory space
+    mov eax, 4
+    mov ebx, [reservedSpace]
+    mov ecx, languages
+    mov edx, 30
+    int 0x80
 
-```python
-train_data =
-val_data = 
+    ; copy description to memory space
+    mov eax, 4
+    mov ebx, [reservedSpace]
+    mov ecx, description
+    mov edx, 60
+    int 0x80
 
-optimizer = torch.optim.SGD(model.parameters(), lr=0.01)
-loss_fn = nn.MSELoss()
+    ; release memory space
+    mov eax, 46
+    mov ebx, [reservedSpace]
+    int 0x80
 
-for epoch in range(50):
-    for inputs, targets in train_data:
-        optimizer.zero_grad()
-        outputs = model(inputs)
-        loss = loss_fn(outputs, targets)
-        loss.backward()
-        optimizer.step()
-
-    with torch.no_grad():
-        for inputs, targets in val_data:
-            outputs = model(inputs)
-            val_loss = loss_fn(outputs, targets)
-
-    print(f'Epoch {epoch+1}, Train Loss: {loss.item()}, Val Loss: {val_loss.item()}')
+    ; exit
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
 ```
