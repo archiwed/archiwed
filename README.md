@@ -1,7 +1,7 @@
 ```asm
 section .data
     name db 'André Duarte', 0
-    languages db 'C/C++/Assembly/Python/Bash/Zsh', 0
+    languages db 'Assembly for x86_64, RISC-V and ARMv7/ C/C++/Python/', 0
     description db 'I love writing in low-level languages but I adore pytorch and Transformers', 0
 
 section .bss
